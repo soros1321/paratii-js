@@ -167,7 +167,7 @@ describe('paratii.core.vids:', function () {
     assert.equal(data.owner, address1)
   })
 
-  it.skip('core.vids.delete() should work as expected', async function () {
+  it('core.vids.delete() should work as expected', async function () {
   })
 
   it('core.vids.like() should work as expected', async function () {
@@ -205,9 +205,9 @@ describe('paratii.core.vids:', function () {
     assert.isOk(hasViewed)
   })
 
-  it.skip('core.vids.buy() should work as expected', async function () {
+  it('core.vids.buy() should work as expected', async function () {
   })
 
-  it.skip('core.vids.search() should work as expected', async function () {
+  it('core.vids.search() should work as expected', async function () {
   })
 })
