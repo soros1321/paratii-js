@@ -501,18 +501,20 @@ var ParatiiIPFS = exports.ParatiiIPFS = function (_EventEmitter) {
   }, {
     key: 'stop',
     value: function stop(callback) {
-      if (!this.ipfs || !this.ipfs.isOnline()) {
-        if (callback) {
-          return callback();
+      var _this5 = this;
+
+      return new _promise2.default(function (resolve, reject) {
+        if (!_this5.ipfs || !_this5.ipfs.isOnline()) {
+          resolve();
         }
-      }
-      if (this.ipfs) {
-        this.ipfs.stop(function () {
-          (0, _setImmediate3.default)(function () {
-            callback();
+        if (_this5.ipfs) {
+          _this5.ipfs.stop(function () {
+            (0, _setImmediate3.default)(function () {
+              resolve();
+            });
           });
-        });
-      }
+        }
+      });
     }
   }]);
   return ParatiiIPFS;
